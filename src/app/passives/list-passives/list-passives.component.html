@@ -1,0 +1,33 @@
+<div class="passives-list">
+  <h1>Passives</h1>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">User</th>
+        <th scope="col">Amount</th>
+        <th scope="col">Currency</th>
+        <th scope="col">Type</th>
+        <th scope="col">Status</th>
+        <th scope="col">Limit date</th>
+        <th scope="col">Created_at</th>
+        <th scope="col">Updated_at</th>
+      </tr>
+    </thead>
+    <tbody *ngIf="passives$ | async as passives">
+      <tr *ngFor="let item of passives">
+        <td>{{item.user}}</td>
+        <td>{{item.amount}}</td>
+        <td>{{item.currency}}</td>
+        <td>{{item.type}}</td>
+        <td>{{item.status}}</td>
+        <td>{{item.limit_date | date}}</td>
+        <td>{{item.created_at | date}}</td>
+        <td>{{item.updated_at | date}}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div>
+    <button class="btn btn-primary" (click)="navigate()">Create Passive</button>
+  </div>
+</div>

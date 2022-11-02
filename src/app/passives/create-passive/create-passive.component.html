@@ -1,0 +1,52 @@
+<div class="passive-form">
+  <h1>Save Passive</h1>
+  <form (ngSubmit)="send()" [formGroup]="passiveForm">
+    <div>
+      <label>
+        <span>Username</span>
+        <input type="email" formControlName="user">
+      </label>
+    </div>
+    <div>
+      <label>
+        <span>Amount</span>
+        <input type="number" formControlName="amount">
+      </label>
+    </div>
+    <div>
+      <label>
+        <span>Currency</span>
+        <input type="text" formControlName="currency">
+      </label>
+    </div>
+    <div>
+      <label>
+        <span>Type</span>
+        <input type="text" formControlName="type">
+      </label>
+    </div>
+    <div>
+      <label>
+        <span>Status</span>
+        <input type="text" formControlName="status">
+      </label>
+    </div>
+    <div>
+      <label>
+        <span>Limit Date</span>
+        <input type="date" formControlName="limit_date">
+      </label>
+    </div>
+    <div class="row">
+      <button class="btn btn-block btn-primary" type="submit">
+        Send
+      </button>
+    </div>
+    <br>
+    <div class="row">
+      <button class="btn btn-block btn-outline-secondary" (click)="navigate()">
+        Return to list
+      </button>
+    </div>
+  </form>
+</div>
